@@ -1,15 +1,12 @@
-import { useSelector } from "react-redux"
-import TodoItem from "./TodoItem"
+import TodoItem from "./TodoItem";
 
 const TodoList = () => {
-  const todoList = useSelector((state) => state.todo.todoList)
-
-  const handleClearList = () => {}
+  const handleClearList = () => {};
 
   return (
     <div>
       <div>
-        {todoList.map((todo) => (
+        {[].map((todo) => (
           <TodoItem key={todo.id} {...todo} />
         ))}
       </div>
@@ -19,7 +16,7 @@ const TodoList = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TodoList
+export default TodoList;
